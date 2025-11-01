@@ -1,0 +1,389 @@
+
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Tasty Full Recipe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
+<script>
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            "primary": "#E94235",
+            "secondary": "#FFFFFF",
+            "accent": "#101010",
+            "background": {
+              "light": "#F7F7F7",
+              "dark": "#181818"
+            }
+          },
+          fontFamily: {
+            "display": ["Poppins", "sans-serif"]
+          },
+          borderRadius: {
+            "DEFAULT": "0.75rem",
+            "lg": "1rem",
+            "xl": "1.5rem",
+            "full": "9999px"
+          },
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings:
+      'FILL' 0,
+      'wght' 400,
+      'GRAD' 0,
+      'opsz' 24
+    }
+  </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-accent dark:text-secondary">
+<header class="sticky top-0 z-50 bg-secondary/80 dark:bg-accent/80 backdrop-blur-sm shadow-md">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex items-center justify-between h-20">
+<div class="flex items-center space-x-2">
+<a class="text-2xl font-bold text-primary" href="#">Tasty Full Recipe</a>
+</div>
+<nav class="hidden md:flex items-center space-x-6">
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">Home</a>
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">Recipes</a>
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">Appetizers</a>
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">Main Course</a>
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">Snacks</a>
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">Sauces</a>
+<a class="text-accent dark:text-secondary hover:text-primary dark:hover:text-primary transition-colors duration-300" href="#">View More</a>
+</nav>
+<div class="flex items-center md:hidden">
+<button class="text-accent dark:text-secondary">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<path d="M4 6h16M4 12h16m-7 6h7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+</svg>
+</button>
+</div>
+</div>
+</div>
+</header>
+<main class="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+<section class="relative h-[500px] rounded-xl overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-500 group-hover:scale-105" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuD3O870PmiRdXTL7e8PMQvPbmWsnA8GWinZWr7Dq93vQjj8LDnCjp0moeNBJcRuG1BPsf8vZOUwvYenynuPbYH1t3Q8HQqHctwQXGef_kcRLrMG6OqXkS3-Q9VoAci_k4rYHtFI5uz9RFED1Oo3zz56VSoMcHjQ0UsbxckkfVdMfxaGUa8uOtvF6Pn2--zWZlfAKjWJACymr-W4k3p1zVaeOcR7aevH8D4Xv_4QE7FmbGNp6UvHA7tTf5GIl2r_cpvpc_P5goqJPoOf");'></div>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/60 to-transparent"></div>
+<div class="absolute inset-0 flex items-end p-8 md:p-12">
+<div class="text-secondary max-w-2xl">
+<h1 class="text-4xl md:text-6xl font-black uppercase tracking-tight">Conchitas Con Carne Recipe</h1>
+</div>
+</div>
+<button class="absolute top-1/2 left-4 -translate-y-1/2 bg-secondary/50 hover:bg-secondary/80 text-accent p-2 rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M15 19l-7-7 7-7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+<button class="absolute top-1/2 right-4 -translate-y-1/2 bg-secondary/50 hover:bg-secondary/80 text-accent p-2 rounded-full transition-opacity duration-300 opacity-0 group-hover:opacity-100">
+<svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path></svg>
+</button>
+</section>
+<section class="py-12">
+<h2 class="text-3xl font-bold uppercase mb-6 text-accent dark:text-secondary">Popular Posts</h2>
+<div class="relative">
+<div class="flex space-x-6 overflow-x-auto pb-4 -mx-4 px-4 scrollbar-hide">
+<div class="group flex-shrink-0 w-64">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Classic Tomato Pasta" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHF_n9_LyFOk5dnp1jYss5sIC2k47G_qW83AuB6XMRXRTVeFNPT05uJUOL1pP2_M5QdrTMLjKzf_s5wgMTra8gQEGaVkhuUJyCuwzAYbBsvVYNAXhqNSX27w2guqhlju9cylS-l5jQjeoORKuk7HqqDOBexD3-jqqo_I7KxqZQpP3BpCWS9jpE8Qe7Z8MKuAlHLQk8rb8aaP-BlIz94vRihV2ITo9qnc846XczfTCX36K4HEMIL-s2gw0IDLa0tjKwMjYy_ix_mler"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Pasta</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Classic Tomato Pasta</h3>
+</div>
+</div>
+<div class="group flex-shrink-0 w-64">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Grilled Salmon Delight" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKsGLp81sEU8k02nV87vRhghWN-LrrmLdNJyR5nT0h8-K7xuwcOV0TdtuFmua5GOn8YRVHo8W9Oc85EYeoVu1wY856U3mNaCfYcoXa5gq17htnEDcLmVHWLCQnp-ZyfqOYlXekzWIQDcZVyxLPPfcc8ulGBelRLssto7z1WBIdDULO3-m_-2av2W6l7C8_58poAle9lN_6gf0yGbe6Pe0TeNgG0LEaApsAm3g5CC12LXs-86yf_fel01ipVPhbUp2yPsyexivu_OkZ"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Seafood</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Grilled Salmon Delight</h3>
+</div>
+</div>
+<div class="group flex-shrink-0 w-64">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Decadent Chocolate Cake" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD3rJbEl4gYQKV7og41LI0MJSrDZE0k442imjiAdaFml5-pHuuKKkx2-4YN8bIrinYFY5bB1XZYYeXZUXKqo9Xn3IfAoH-_c6sMuqNJYPBYVVde5YguH0b_rcndQUu2H2zu91bgXl2qmkCD97K0pwlvG0lrYbWlM6rWfZx25e1daBNOkMJbPX_JRsNMvTr34lzR9TtXa6EfO2IPn8WY-HNFFnYdoiDTMPelw-PY-qQtDQDoNEMqPPI4QDX654FC4MZDBc-Wbg841M69"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Dessert</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Decadent Chocolate Cake</h3>
+</div>
+</div>
+<div class="group flex-shrink-0 w-64">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Savory Chicken Stir-Fry" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDbx5kYHrGpFJAst7hLubZGHcHTtRsN6t6lvWRXoBhsuDXLUlcr_S21zT_j6YoReMiBipxE0FppmkH2ldfGn-2ukdVlDRaqNDOuLBdleo3K7qyGfnHkb0UqnnbEYsPcvnY2slJ3AhM4QBhYvNiYXaLl5syXovG2IKw_MF66hkOvmittygayQMUFc6pZu_cK1Ti9DYtBQ5nxQ0b6vsiWePvpULM1-xct-S2oTxKd403KlXoHMVSv4t2CyaeLmOAZq-sMg3dNHguTrxqJ"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Main Course</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Savory Chicken Stir-Fry</h3>
+</div>
+</div>
+<div class="group flex-shrink-0 w-64">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Mini Quiches" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5z_pdxErUPB3GOpuiUvuhIA7XQQ1vt9-Vz76KSpxg30KHq87Nq5WTqZJPsW6bIPzaw991Yxa9dDcEXcA12nCm9t1przW1_xtFMHg1hPi5t1D6eOj5cpY9P2tLjlOra2YJYZ6AeNkgKoF7-8heevF12tbd9YPyr41AIGEZ8EFj6MrzlGbrFu4EGrKP-csYhRuWDMmrPATnKWUo2UGKpznCqX0cMEjoGj8I5nntlO9lRhLBup5Uj92DR1CASFYc9w7IGsx5CZuBQswP"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Appetizer</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Mini Quiches</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="grid grid-cols-1 md:grid-cols-2 gap-8 my-8">
+<div class="bg-background-light dark:bg-accent/20 p-8 rounded-lg flex items-center justify-center">
+<div class="w-[600px] h-[240px] bg-secondary/50 dark:bg-accent/50 rounded flex items-center justify-center"><p class="text-accent/50 dark:text-secondary/50">Advertisement 600x240</p></div>
+</div>
+<div class="bg-background-light dark:bg-accent/20 p-8 rounded-lg flex items-center justify-center">
+<div class="w-[400px] h-[240px] bg-secondary/50 dark:bg-accent/50 rounded flex items-center justify-center"><p class="text-accent/50 dark:text-secondary/50">Advertisement 400x240</p></div>
+</div>
+</section>
+<section class="py-12">
+<h2 class="text-3xl font-bold uppercase mb-6 text-accent dark:text-secondary">Our Blogs</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+<div class="group">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Spicy Chicken Tacos" class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDHDS2uTbMQ3p06Rh82WheXcWMDuyagaZS-rjgW2lb3jvLm1QXnY6n3FVXjjbWLTaPObHRAYT7ZSdj9nBxyBCb9RVzcOCxEU-NlBl-YnWXHywg42HWzJ_O-7C6RVbAjqLybzYGX07aEO-fmtb5XTYk49-8kPi0jyvRD2XP5dyDDqMT7Vf8weZffSyaCeaHDaFAdb0n32K3wbsRtnDtcPM6sphDtKtOVAinjMbUi25yLde-OSin762MQWhIy9qiDAacJMet5k1bOSehY"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Chicken Tacos • 22 July, 2024</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Spicy Chicken Tacos</h3>
+</div>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Creamy Mushroom Soup" class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB7W8cGEyojrw76ndEBhx2dHl69qTqCoc0TmGNGY16fGDlwOo24Q6L0wvyUrTdsFC2EkcybVC64lYJZN_NNvvROpS-UTncx2NtWHCWVRkCu2t9XZOHp_x_oXwi2KBk1-EFeM64nApFsM0R0XKKIz-V4gNZrUidcvwy6wUFo2kUapDY5Z8XvA_oZRJVbaSgpxU1NVal_bcSBxHs8IA5yAr9mTf9NqkEfDgNigbUqlQyb30yzqD-bXTPlbjWxSNUdB4iMjixD1cMCS-qF"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Mushroom Soup • 20 July, 2024</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Creamy Mushroom Soup</h3>
+</div>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Lemon Herb Roasted Chicken" class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAz6G3ckw19sVxesa_sGbujGurW8SEMH9sjIzXJs38O8W6CfB9WO_hxYigxlwGbWc71_WBm89LMZlye-G_cXIl1VozdwNfx3t3-pRXPXYjhuww8zE3wa6rgN7XlgN84suJXvuLp7S616e5rKNqwp1mXaS_meOLy1dMYGHBbKFxbXBRJ4wSld4ELDBvBZtddKdA8moBYL_hwOSCzr5_CHeu1M1GTCuYKwD39pYHeFMNB7y-nbytm7zT63791QABuPm9VjCwYrZjpFMH3"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Roasted Chicken • 18 July, 2024</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Lemon Herb Roasted Chicken</h3>
+</div>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Chocolate Chip Cookies" class="w-full h-48 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXhS-VpgtoAkp05x7WfgSossZRk4nBlwuUZpO0hu1loWV42Y8-Bzt_S97_xEK7LXu2QwmJFPC9zVnSm7oUvl3GqK6DB7Qg28U5iMVW0eu6XV1Ieuz71NqcYYV34xmssJKZzIJTauGwM7b4NvkLVtGL5PdcLUv-Vkav_GNJlx6JWqzACSZCbnD9Gc5jWhi1WsAH57Ob0uvERn-PgOk8RyzoyWlR2jk6pj23RZSTyFqAnJFmt4hr9ATHH9XlgmFY0i2ZVNYWtqZYQnad"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Cookies • 15 July, 2024</p>
+<h3 class="text-lg font-bold text-accent dark:text-secondary mt-1">Chocolate Chip Cookies</h3>
+</div>
+</div>
+</div>
+</section>
+<section class="py-12">
+<h2 class="text-3xl font-bold uppercase mb-6 text-accent dark:text-secondary">Latest News</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-2">
+<a class="group relative col-span-2 row-span-2 rounded-lg overflow-hidden shadow-lg" href="#">
+<img alt="Summer Salad Recipes" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvG44vGOoCdVjV0s6C22udRBwl91RH_Z4C8oFvhWPz8hgLIDsg-sy9kWVNcgzBdzbSd9yknikBlc0_h2Ty3uRsLtmEGtxpJAg7CjdNc-vMeTTiTrhcaIxHzBK4YW-POdxBswbvpSVoBHBs0mizw1joOF3MhbOjjGyZFquReBHE8pcmOzuhT8QA_Xf_eBrka09E2w7dI8JufW0bxWGkR0DqfzEy7-ehsnGNgpZy64EaK_Nn-ywpufJ6sVHl68g4sUzzmJHiO7r1BYhj"/>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h3 class="text-xl font-bold text-secondary">Summer Salad Recipes</h3>
+<div class="h-0.5 w-16 bg-primary mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<p class="text-secondary mt-2 opacity-0 group-hover:opacity-100 transition-opacity duration-300">Read More</p>
+</div>
+</a>
+<a class="group relative rounded-lg overflow-hidden shadow-lg" href="#">
+<img alt="Quick Breakfast Ideas" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP-T7bUqzIu5Pyc_SIBzzbS39cPYKnHf1VY2bdrJOA3T5M41qF_UnCHBg9rBxRa5ijlqjOv7WYGvlJUk4v28Uybu0l2ozex0iu2DtKBnok-T8g27X8SywLJeo891ke3QGFVP6D4i7Kejz3pGyp9jjDceEhL8WCsQiwFweAsX7w9dW0Y7pGDw02rUHD_YdF0sQtVVYC9tOj-slGJ5PpR0QcD08f0f5RTDKezHYS-kMySc53UriRX_Ot9vhstu3-gyBAWRytp6ZxH76F"/>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h3 class="font-bold text-secondary">Quick Breakfast Ideas</h3>
+<div class="h-0.5 w-12 bg-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<p class="text-secondary mt-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Read More</p>
+</div>
+</a>
+<a class="group relative rounded-lg overflow-hidden shadow-lg" href="#">
+<img alt="Healthy Snack Options" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuArnmLZcbWBqNW_PzLf5nk5-na3nymokNIHRVNN_zXAbAo_GdoN7slSPZhFEYy88CWW-kZRvGMHm04CzreYxIa6sLPywZX4a63dIZYtxUJDjNjfr0oQJIc9-bTd5IFTcFB-4rJ7CXXDt8kvu4Q12doRN3h5_fweE8h9_soGzrL1zHO3fpQ5XhjnElhZyk68kYSNLF9lnX2cdIwWshcVC4no82q8ep7romhF58ynkkqYXetVCacnJzbtVOXWqwJ8icwWvy8uFxgDWtzV"/>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h3 class="font-bold text-secondary">Healthy Snack Options</h3>
+<div class="h-0.5 w-12 bg-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<p class="text-secondary mt-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Read More</p>
+</div>
+</a>
+<a class="group relative col-span-2 rounded-lg overflow-hidden shadow-lg" href="#">
+<img alt="Gourmet Dinner Inspirations" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCijXwU2yvrtHR2A8-z0PYmkpObzyo5fqu3bDgq404a-E_l2oobd5JDcTndpGNOTVqrvjRCroa64alhX_MvLHsjX7eXNx7aGxLT5TfzJ_6pIeyKiCMhyDNGAsCONkpul2XL0TZ7C-FB8GaXUmn9vbMmWv9ocsSFuM3q_-1srfmBQPZNdTmwzHvr-sZJz1fXF6CJIdDc_y7nkKiQZuw6g8biP8VUkxZPYz1AY4l7ifbxv4Z4y2UDR9wXgFt_7fp3UCBdlGsuws2lJDrE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h3 class="font-bold text-secondary">Gourmet Dinner Inspirations</h3>
+<div class="h-0.5 w-12 bg-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<p class="text-secondary mt-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Read More</p>
+</div>
+</a>
+<a class="group relative rounded-lg overflow-hidden shadow-lg" href="#">
+<img alt="Baking Tips and Tricks" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9KvVGqdhfbv2kwmbp1_HLLgfx2wUMT1PV5KkeyTwABOM5NoxO1sFiD9X8Hb2OU1e86L9Nbep6IJHaA73UclZoPbFhSDFCIG-v3dRrvzJZneH3D_P_m47RSmW86fV4QS4A3Qv_jsITQMwiz9JIOgsIRSra4LbO67_N1RCJBhLpplJgVhH1NjMXhT9IBjSnlGXDWmCBKDkjSUoS5BX8vJoC3xRIcjNk9gfOkKGTfDIZOcEDqCReGDo64qc-OeuXwsMQJkDsoe2F4vmz"/>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h3 class="font-bold text-secondary">Baking Tips &amp; Tricks</h3>
+<div class="h-0.5 w-12 bg-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<p class="text-secondary mt-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Read More</p>
+</div>
+</a>
+<a class="group relative rounded-lg overflow-hidden shadow-lg" href="#">
+<img alt="Vegetarian Dishes" class="w-full h-full object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDT_-DSFl--kLFqpeVT2ob99jFRFWSSbADLtHFDkJwlXuY9RR0eL8cpN85w_UE1X6vzpKqMgLXo6xfiFa6S_w4TOo4N69qufxG7ILIrEa4DcdT3xklmToQqr_WoknLfmxHsF_9r3ak_VCTjV5NTE7EsbrNQ-nuYee1e6hbEurmdnpIoyZhNr6T5j2DKZJZJ1s4qid7kHAsgAScB3znOOl167yOu_bvj_Xxt5vdgVcgQsctf8bYJT0hzO8Z_47aiYVCMxcAzXaWd4HXF"/>
+<div class="absolute inset-0 bg-gradient-to-t from-accent/70 to-transparent"></div>
+<div class="absolute inset-0 p-4 flex flex-col justify-end">
+<h3 class="font-bold text-secondary">Vegetarian Dishes</h3>
+<div class="h-0.5 w-12 bg-primary mt-1 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+<p class="text-secondary mt-1 text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300">Read More</p>
+</div>
+</a>
+</div>
+</section>
+<section class="bg-primary text-secondary rounded-xl my-12 p-8 md:p-12">
+<h2 class="text-3xl font-bold uppercase mb-6 text-center">Snacks &amp; Appetizers</h2>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<a class="group text-center" href="#">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Stuffed Mushrooms" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuBwlW8d5Isb8956tq7YKG6FfLapitYDpeJAvCGo80a-xVuf1RkEFH5qK0ibRIE0m691wniXbN5eDP-6_y0QclcaRykkQYfqwfWmOnbfQmry0fPuvo1PejBG69oV0NBNiRhaFtxZoaP-J3zaXxAXx4BO5G-fyDwpsaMf5z-_2WN1HVSvKam-ochbz9WMNgA5H3DD2BSa19JswMJJGRYNMRLbU9Gwhql32BS_tyGhRDIbKpdUZT_avt6SoUtu_P9aFYRE4S0SEOlSaV"/>
+</div>
+<h3 class="text-lg font-bold mt-4">Stuffed Mushrooms</h3>
+</a>
+<a class="group text-center" href="#">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Tomato Bruschetta" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZzZpRBIeUNfDzvMj5Ka_n_CyQmiVYbRS3k2awicbkrf9kbzirw-GqDH8KwuEJgvg7QaghOIW6d6fUbghdMQvu2VZQDerSVB4x26MQNrtQQvMe16VDRFgXdfu2eoIra_YNU05dR20tDP8kKJcZoOnIGpHck49ML6BAEEmSCWvOA4pjJXrl5CAuhQMq7NWqBDhoKD-aZxbk53mzV1DdeGmiA5WvM2cB40y0CtxiwvWZ09FabVgFZrt4xTHmHOYEvAX-5qykeeiESt6e"/>
+</div>
+<h3 class="text-lg font-bold mt-4">Tomato Bruschetta</h3>
+</a>
+<a class="group text-center" href="#">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Cheese &amp; Crackers" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAJtLwELr1mVtwT7shk1knTHg3OQXB7e7-Td140pscAFm8rtFtA51vMO38JCrpK-j8hoVZOohub3J6spm7x4KNF0l5wnp2DNDPReG2fZ0xM9Ip_WaWHi4Jmt7BzukSYY6-xhfPjHWZuNzbOn6siFhJvuhko0v9JgPwMudSD4gdw27UjZ10t-kQgWmqkSUk_NTxWH81yJSJZd3Mb06qEAhaAIZRUbBeQIPH1oR9xZ5SAuIWokxdbw4Prj6_AvMdEeAkVXRt32JL1fKsX"/>
+</div>
+<h3 class="text-lg font-bold mt-4">Cheese &amp; Crackers</h3>
+</a>
+<a class="group text-center" href="#">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Mini Quiches" class="w-full h-40 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5z_pdxErUPB3GOpuiUvuhIA7XQQ1vt9-Vz76KSpxg30KHq87Nq5WTqZJPsW6bIPzaw991Yxa9dDcEXcA12nCm9t1przW1_xtFMHg1hPi5t1D6eOj5cpY9P2tLjlOra2YJYZ6AeNkgKoF7-8heevF12tbd9YPyr41AIGEZ8EFj6MrzlGbrFu4EGrKP-csYhRuWDMmrPATnKWUo2UGKpznCqX0cMEjoGj8I5nntlO9lRhLBup5Uj92DR1CASFYc9w7IGsx5CZuBQswP"/>
+</div>
+<h3 class="text-lg font-bold mt-4">Mini Quiches</h3>
+</a>
+</div>
+</section>
+<section class="py-12">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2">
+<h2 class="text-3xl font-bold uppercase mb-6 text-accent dark:text-secondary">Latest From Food</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="group">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Grilled Steak with Asparagus" class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpCrQZGkNHuCJo9zQlavLOgBFcruR20GWCm4bFqI7pL1zJHOVv8bDH-o3gLmq2DboauNoyY6aHdt8BhLEONBm_bxYbnN6shcCnkfVhoECQn2BRV9idKfXa8bnW1aMAIBsxqKVnVHDDuIln10EpMJ62UozJM3JKV7ZZd7_Fd1WNEwbW_FtcoR-ctKJs81IPsJoIQ2ouTTqfb9fum3zZP1G40tpmCt7dyYCS-w0JSeeH0qli8VjdhTHKWaPnB1LkuTQmvgqgdn3DErhT"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Main Course</p>
+<h3 class="text-xl font-bold text-accent dark:text-secondary mt-1">Grilled Steak with Asparagus</h3>
+</div>
+</div>
+<div class="group">
+<div class="overflow-hidden rounded-lg shadow-lg">
+<img alt="Pasta Primavera" class="w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAD4r1N5bDa6u70MvYZK6IfA_pWGCj1OoY47YOYYVJ_ltLV0XQtGjOms4WmuWFiVFmxXRNhvCEJyXCIP9hlCsF4xSnGQB3a4ctKJuf0-kc2QzVKVRNwWt1yLgpTjQKn6vAV1-jfKYpDJ9SWOWl7YCtmu_jrvXz3_2DWja02iGmUBckXOe-P2urfZ_dOBx6fBEic8LJ8UYOEbAbfIBvkBMfpjvJai8kgppzkidixeVgx1r4SGg6CiZXc0v4wnZMvO92tFRmCHOjZ7WBR"/>
+</div>
+<div class="mt-4">
+<p class="text-sm text-primary font-medium">Pasta</p>
+<h3 class="text-xl font-bold text-accent dark:text-secondary mt-1">Pasta Primavera</h3>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2 class="text-3xl font-bold uppercase mb-6 text-accent dark:text-secondary">Latest Articles</h2>
+<div class="space-y-6">
+<a class="flex items-center space-x-4 group" href="#">
+<img alt="Top 5 Smoothie Recipes" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBo6Ic7TyPAn9RzGcVCdSRYXBOCs64NeDFVUeoCFiD35tgF-kz6I_Om0niQnqQeU75egVipxZR2MCRz-22fGu7uwM6_ji_yTXt6vBtNgulQ8DwHY3wtM69a12ikbOUZcLwztA7B8MB2lcP-lvggeVGYNzVthNMgH1pU7LyFMUcXergbmvEVVFgnVSXQZPgb9svau5qdaqK2BRoqoLr8gZEeCrHqPAahMSx6uZhg-qXjxKiXH7Xt6ZKM0Oh5AWpvAv8uZj8OXaxkTzNT"/>
+<div>
+<p class="text-sm text-primary font-medium">Smoothies</p>
+<h3 class="font-bold text-accent dark:text-secondary group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">Top 5 Smoothie Recipes</h3>
+</div>
+</a>
+<a class="flex items-center space-x-4 group" href="#">
+<img alt="Best Coffee Brewing Methods" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBllQaR90xcMB9PAhqtpFsi-Rhc3OZ7O01ZlEZ02R18_rEfwB9xq24m7_EUo8vpy5Aq8BsRA2JOhoE2odwNOjY1F1Gvzr_QqwIibpfeV9QxgJ6urLZDc7SV7tCqDG-7LSSKtNu8J607qA3lD20K5y2odkXSU7ktJe50eI6PkVR3Ygg04soqG9SkabicmsHPQon7l7Vj5jL-ZYDvzTF5nLiv5imzuWqGfeIaAKGvQpb3eTGic-Azqa4S0oHz30SjM8U9p-EHMnnGdifV"/>
+<div>
+<p class="text-sm text-primary font-medium">Coffee</p>
+<h3 class="font-bold text-accent dark:text-secondary group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">Best Coffee Brewing Methods</h3>
+</div>
+</a>
+<a class="flex items-center space-x-4 group" href="#">
+<img alt="Guide to Wine Pairing" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAepTqL_DyN9teJUYCKVpxayyYLaU-M3aTBsfUdG_0g5aqxmNJre6EJszMMuZJpWDksCyRcfyzs213tBmAkiFtAa1xwyC5Wv4UoDEGLMmLcjmg0NH6LVLFpeKMY9w7a5bKwVkXcdqKI0AC9YZIjmIGmp7E1AhKA7f-ad-pQ_xGFEUA8TFOtc3_U3HfaqzNcaZE8wMlEtv40OFBKJjXuK6Mcc2omrlE8LRMDdqTP_iVBDUkwT9Kh7-MUMrKz5F87qvfNQ0EwMiN5BFKE"/>
+<div>
+<p class="text-sm text-primary font-medium">Wine</p>
+<h3 class="font-bold text-accent dark:text-secondary group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">Guide to Wine Pairing</h3>
+</div>
+</a>
+<a class="flex items-center space-x-4 group" href="#">
+<img alt="Essential Kitchen Tools" class="w-24 h-24 object-cover rounded-lg" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCAJRtG9YEshLKSAVuGnSGPU0EAN3NHxu7jmHMJ-yrcNkQEWjJ3PbloFh3UEc_gQ86iF6al3ppUcXNs0d_s5BneTrxkKr4bCD5aA7xvf1zDc92GuvxxIXlPCD_Vptbg2oJY2PrVGxtvDX2EBXS8cM8Kg-Bf4QKXHd4WKSUjsYRrhM4iz-13y5BtOPmkbFvtya-k_euzen7W5mS0Gf2aSroUAvWGUCtP7oP_b3zSqnEmFH0-KA58nd7UEagTSH2lAEMj4zccD8drT342"/>
+<div>
+<p class="text-sm text-primary font-medium">Kitchen</p>
+<h3 class="font-bold text-accent dark:text-secondary group-hover:text-primary dark:group-hover:text-primary transition-colors duration-300">Essential Kitchen Tools</h3>
+</div>
+</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="bg-accent text-secondary/70">
+<div class="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+<div>
+<h3 class="font-bold uppercase text-secondary">Company</h3>
+<nav class="mt-4 space-y-2">
+<a class="block hover:text-primary transition-colors duration-300" href="#">About Us</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Contact Us</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Careers</a>
+</nav>
+</div>
+<div>
+<h3 class="font-bold uppercase text-secondary">Categories</h3>
+<nav class="mt-4 space-y-2">
+<a class="block hover:text-primary transition-colors duration-300" href="#">Appetizers</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Main Course</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Desserts</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Snacks</a>
+</nav>
+</div>
+<div>
+<h3 class="font-bold uppercase text-secondary">Editor's Pick</h3>
+<nav class="mt-4 space-y-2">
+<a class="block hover:text-primary transition-colors duration-300" href="#">Healthy Recipes</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Quick Meals</a>
+<a class="block hover:text-primary transition-colors duration-300" href="#">Vegan Options</a>
+</nav>
+</div>
+<div>
+<h3 class="font-bold uppercase text-secondary">Follow Us</h3>
+<div class="flex space-x-4 mt-4">
+<a class="hover:text-primary transition-colors duration-300" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M22.46,6C21.78,6.34 21.05,6.58 20.28,6.69C21.08,6.21 21.68,5.43 21.96,4.5C21.21,4.95 20.38,5.28 19.5,5.47C18.79,4.73 17.78,4.25 16.63,4.25C14.42,4.25 12.63,6.04 12.63,8.25C12.63,8.57 12.67,8.88 12.75,9.17C9.3,7.5 6.4,5.48 4.49,2.58C4.13,3.19 3.93,3.89 3.93,4.64C3.93,6.08 4.66,7.35 5.73,8.08C5.08,8.06 4.46,7.89 3.93,7.61V7.66C3.93,9.63 5.38,11.28 7.3,11.69C6.97,11.78 6.62,11.82 6.26,11.82C6,11.82 5.75,11.8 5.5,11.75C6.03,13.38 7.55,14.56 9.39,14.6C7.96,15.72 6.1,16.4 4.12,16.4C3.8,16.4 3.48,16.38 3.17,16.34C4.98,17.52 7.12,18.25 9.47,18.25C16.62,18.25 20.55,12.28 20.55,7.1C20.55,6.91 20.55,6.72 20.54,6.53C21.3,5.99 21.96,5.28 22.46,4.45L22.46,6Z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12,2A10,10 0 0,0 2,12C2,16.97 5.26,21.16 9.75,21.84V15.75H7V12.75H9.75V10.5C9.75,7.83 11.42,6.25 13.78,6.25C14.87,6.25 15.8,6.44 15.8,6.44V8.93H14.47C13.19,8.93 12.75,9.79 12.75,10.77V12.75H15.69L15.22,15.75H12.75V21.84C17.24,21.16 20.5,16.97 20.5,12A10,10 0 0,0 12,2Z"></path></svg>
+</a>
+<a class="hover:text-primary transition-colors duration-300" href="#">
+<svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M7.8,2H16.2C19.4,2 22,4.6 22,7.8V16.2A5.8,5.8 0 0,1 16.2,22H7.8C4.6,22 2,19.4 2,16.2V7.8A5.8,5.8 0 0,1 7.8,2M7.6,4A3.6,3.6 0 0,0 4,7.6V16.4C4,18.39 5.61,20 7.6,20H16.4A3.6,3.6 0 0,0 20,16.4V7.6C20,5.61 18.39,4 16.4,4H7.6M17.25,5.5A1.25,1.25 0 0,1 18.5,6.75A1.25,1.25 0 0,1 17.25,8A1.25,1.25 0 0,1 16,6.75A1.25,1.25 0 0,1 17.25,5.5M12,7A5,5 0 0,1 17,12A5,5 0 0,1 12,17A5,5 0 0,1 7,12A5,5 0 0,1 12,7M12,9A3,3 0 0,0 9,12A3,3 0 0,0 12,15A3,3 0 0,0 15,12A3,3 0 0,0 12,9Z"></path></svg>
+</a>
+</div>
+</div>
+</div>
+<div class="border-t border-secondary/20 mt-8 pt-6 text-center text-sm">
+<p>© 2024 Tasty Full Recipe. All Rights Reserved. Developer Nasim MUnna</p>
+</div>
+</div>
+</footer>
+
+</body></html>
